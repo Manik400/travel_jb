@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -14,10 +15,13 @@ class _homeState extends State<home> {
     return Container(
       decoration: BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(
-                'assets/page-3/images/rectangle-85.png',
-              ),
-              fit: BoxFit.cover)),
+        image: AssetImage(
+          'assetss/rectangle-85.png',
+        ),
+        fit: BoxFit.cover,
+        colorFilter:
+            ColorFilter.mode(Colors.white.withOpacity(0.8), BlendMode.dstATop),
+      )),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
@@ -29,16 +33,16 @@ class _homeState extends State<home> {
                   Text(
                     'Baga Beach',
                     style: TextStyle(
-                        fontSize: 19.040222168 * ffem,
+                        fontSize: 30.040222168 * ffem,
                         color: Color(0xffffffff),
-                        fontWeight: FontWeight.w600),
+                        fontWeight: FontWeight.bold),
                   ),
                   Text(
                     'Goa india',
                     style: TextStyle(
-                      fontSize: 12 * ffem,
+                      fontSize: 23 * ffem,
                       color: Color(0xffffffff),
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                     ),
                   )
                 ],
@@ -48,41 +52,46 @@ class _homeState extends State<home> {
             child: Text(
               'One of the most happening beaches in Goa, Baga Beach is where you will find water sports, fine dining restaurants, bars, and clubs. Situated in North Goa, Baga Beach is bordered by Calangute and Anjuna Beaches.',
               style: TextStyle(
-                fontSize: 9.520111084 * ffem,
-                color: Color(0xffffffff),
-                fontWeight: FontWeight.w400,
-              ),
+                  fontSize: 21.020111084 * ffem,
+                  color: Color(0xffffffff),
+                  fontWeight: FontWeight.w700),
             ),
           ),
-          Row(
-            children: [
-              Image(
-                image: AssetImage(
-                  'assets/page-3/images/star-submit-review-Fab.png',
+          Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Row(
+              children: [
+                Transform.rotate(
+                  angle: math.pi / 180 * 31,
+                  child: Image(
+                    image: AssetImage(
+                      'assetss/star-submit-review-Fab.png',
+                    ),
+                    width: 59.72 * fem,
+                    height: 39.98 * fem,
+                  ),
                 ),
-                width: 59.72 * fem,
-                height: 39.98 * fem,
-              ),
-              Text(
-                '4.8',
-                style: TextStyle(
-                  fontSize: 9.520111084 * ffem,
-                  fontWeight: FontWeight.w600,
-                  color: Color(0xffffffff),
-                ),
-              )
-            ],
+                Text(
+                  '4.8',
+                  style: TextStyle(
+                    fontSize: 19.520111084 * ffem,
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xffffffff),
+                  ),
+                )
+              ],
+            ),
           ),
-          SizedBox(
-            height: 71.93 * fem,
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 20, vertical: 20),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text(
                   '₹15,000/person',
                   style: TextStyle(
-                    fontSize: 11.1067962646 * ffem,
-                    fontWeight: FontWeight.w500,
+                    fontSize: 23.1067962646 * ffem,
+                    fontWeight: FontWeight.w900,
                     color: Color(0xffffffff),
                   ),
                 ),
@@ -92,8 +101,8 @@ class _homeState extends State<home> {
                     'Book Now',
                     style: TextStyle(
                       color: Color(0xff0c0507),
-                      fontSize: 11.1067962646 * ffem,
-                      fontWeight: FontWeight.w600,
+                      fontSize: 16.1067962646 * ffem,
+                      fontWeight: FontWeight.w700,
                     ),
                   ),
                   style: ButtonStyle(
